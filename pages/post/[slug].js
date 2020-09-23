@@ -31,10 +31,15 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
 
       <article>
         <header className="mb-8">
-          <h1 className="mb-2 text-6xl font-black leading-none font-display">
+          <h1 className="mb-2 text-6xl font-black text-red-600 leading-none font-display">
             {frontmatter.title}
           </h1>
-          <p className="text-sm">{frontmatter.date}</p>
+          <p
+            className="text-blank text-red-9
+          00"
+          >
+            {frontmatter.date}
+          </p>
         </header>
         <ReactMarkdown
           className="mb-4 prose-sm prose sm:prose lg:prose-lg"
@@ -43,14 +48,11 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
           renderers={{ code: CodeBlock, image: MarkdownImage }}
         />
         <hr className="mt-4" />
-        <footer>
-          <Bio className="mt-8 mb-16" />
-        </footer>
       </article>
-      <nav className="flex flex-wrap justify-between mb-10">
+      <nav className="flex flex-wrap justify-between p-4 bg-blue-900 mb-4">
         {previousPost ? (
           <Link href={"/post/[slug]"} as={`/post/${previousPost.slug}`}>
-            <a className="text-lg font-bold">
+            <a className="text-lg text-gray-200 font-bold">
               ← {previousPost.frontmatter.title}
             </a>
           </Link>
@@ -59,7 +61,9 @@ export default function Post({ post, frontmatter, nextPost, previousPost }) {
         )}
         {nextPost ? (
           <Link href={"/post/[slug]"} as={`/post/${nextPost.slug}`}>
-            <a className="text-lg font-bold">{nextPost.frontmatter.title} →</a>
+            <a className="text-lg text-gray-200 font-bold">
+              {nextPost.frontmatter.title} →
+            </a>
           </Link>
         ) : (
           <div />

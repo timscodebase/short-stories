@@ -22,16 +22,18 @@ export default function Layout({ children }) {
       <Bio className="my-14" />
     </>
   ) : (
-    <>
-      <h1 className="mb-2">
-        <Link href="/">
-          <a className="text-5xl font-black text-gray-200 no-underline font-display">
-            {title}
-          </a>
-        </Link>
-      </h1>
-      <Bio className="my-14" />
-    </>
+    <div className="relative">
+      <section className="lg:fixed lg:w-48">
+        <h1 className="mb-2">
+          <Link href="/">
+            <a className="text-5xl font-black text-gray-200 no-underline font-display">
+              {title}
+            </a>
+          </Link>
+        </h1>
+        <Bio className="my-14" />
+      </section>
+    </div>
   );
 
   return (
