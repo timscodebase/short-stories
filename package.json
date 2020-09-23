@@ -1,8 +1,8 @@
 {
-  "name": "nextjs-blog-starter",
+  "name": "short-stories",
   "version": "0.2.0",
-  "description": "A Next.js template for a blog website.",
-  "private": true,
+  "description": "A blog collection of short stories.",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -33,9 +33,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jfelix61/nextjs-starter-blog.git"
+    "url": "git+https://github.com/timscodebase/short-stories.git"
   },
-  "homepage": "https://github.com/Jfelix61/nextjs-starter-blog#readme",
+  "homepage": "https://github.com/timscodebase/short-stories.git",
   "keywords": [
     "next.js",
     "blog",

@@ -7,17 +7,20 @@ export default function Bio({ className }) {
   const { author, social } = getSiteMetaData();
 
   return (
-    <div className={clsx(`flex items-center`, className)}>
+    <div className="sm:flex sm:flex-wrap">
       <Image
-        className="flex-shrink-0 mb-0 mr-3 rounded-full w-14 h-14"
+        className="mb-4 rounded-full mx-auto lg:w-40 lg:h-40 sm:w-16 sm:h-16"
         src={require("../content/assets/profile.png")}
         previewSrc={require("../content/assets/profile.png?lqip")}
-        alt="Profile"
+        alt="Picture of the author"
       />
-      <p className="text-base leading-7">
+      <p className="text-base leading-7 text-gray-100 lg:w-full sm:w-3/4">
         Written by <b className="font-semibold">{author.name}</b>{" "}
         {author.summary}{" "}
-        <a href={`https://twitter.com/${social.twitter}`}>
+        <a
+          className="font-extrabold text-gray-200"
+          href={`https://twitter.com/${social.twitter}`}
+        >
           Follow him on twitter
         </a>
       </p>
